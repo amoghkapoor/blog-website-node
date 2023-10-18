@@ -1,0 +1,175 @@
+<style>
+	*,
+	*::after,
+	*::before {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	html {
+		background-color: rgb(18, 18, 18);
+		color: #fff;
+	}
+
+	.body-404 {
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #1db954;
+	}
+
+	.body-index {
+		min-height: 100vh;
+		min-width: 100vw;
+	}
+
+	.navbar {
+		background-color: #1db954;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		padding: 2rem;
+		height: 100%;
+		font-size: 1.5rem;
+		color: rgb(18, 18, 18);
+	}
+
+	.nav-links {
+		display: flex;
+		list-style: none;
+		height: 100%;
+	}
+
+	.site-title {
+		font-size: 1.75rem;
+	}
+
+	.nav-links > li {
+		height: 100%;
+		margin-left: 1rem;
+		transition: all 0.3s ease;
+	}
+
+	.nav-links > li:hover {
+		color: rgb(54, 54, 54);
+	}
+
+	.create-blog-form {
+		display: flex;
+		flex-direction: column;
+		width: 40%;
+		height: 100%;
+		margin: 1.5rem auto;
+	}
+
+	.create-blog-form > label {
+		margin-top: 2rem;
+		margin-bottom: 0.5rem;
+		font-size: 1.25rem;
+	}
+
+	.create-blog-form > input,
+	.create-blog-form > textarea {
+		background-color: rgb(40, 40, 40);
+		border-radius: 10px;
+		border: 0;
+		outline: 0;
+		padding: 0.75rem;
+		font-size: 1.25rem;
+		color: #fff;
+	}
+
+	.create-blog-form > textarea {
+		resize: none;
+		width: 100%;
+		height: 10rem;
+	}
+
+	.blogs {
+		margin-top: 3rem;
+		margin-left: 3rem;
+	}
+
+	.blogs > h2 {
+		font-size: 2.5rem;
+	}
+
+	.blog-container {
+		padding: 2rem;
+		margin-top: 3rem;
+		background-color: rgb(40, 40, 40);
+		width: 40%;
+		border-radius: 10px;
+		height: 8rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		cursor: pointer;
+	}
+
+	.blog-container > .title {
+		margin-bottom: 1rem;
+	}
+
+	.no-blogs {
+		margin-top: 2rem;
+		font-size: 1.5rem;
+		color: rgb(230, 84, 84);
+	}
+
+	.create-blog-submit-button {
+		width: 50%;
+		padding: 0.75rem 2rem;
+		margin: 2rem auto;
+		cursor: pointer;
+		background-color: #1db954;
+		border: none;
+		outline: none;
+		border-radius: 30px;
+		font-size: 1.25rem;
+	}
+	.tags {
+		font-weight: normal;
+		color: #1db954;
+		padding-top: 0.75rem;
+		font-size: 0.75rem;
+		text-align: right;
+		cursor: pointer;
+	}
+
+	.blog-details {
+		margin-top: 5rem;
+		margin-left: 4rem;
+		margin-right: 4rem;
+		height: 100%;
+	}
+
+	.blog-details > h2 {
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.delete {
+		background-color: rgb(230, 84, 84);
+		cursor: pointer;
+		padding: 0.75rem 1.25rem;
+		position: absolute;
+		bottom: 3rem;
+		right: 4rem;
+		border-radius: 10px;
+		transition: all 0.2s ease-out;
+	}
+
+	.delete:hover {
+		background-color: rgba(230, 84, 84, 0.8);
+	}
+</style>

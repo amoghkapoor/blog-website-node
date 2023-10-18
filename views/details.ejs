@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Blog | Details</title>
+		<%- include("../style.ejs") %>
+	</head>
+	<body>
+		<%- include("./partials/navbar.ejs") %>
+
+		<div class="blog-details">
+			<h2 class="title"><%= blog.title %></h2>
+			<div class="content">
+				<p><%= blog.body %></p>
+			</div>
+			<a class="delete" data-doc="<%= blog._id %>">Delete</a>
+		</div>
+	</body>
+	<script>
+		const deleteBlog = document.querySelector("a.delete");
+
+		deleteBlog.addEventListener("click", (e) => {
+			const endpoint = `/blogs/${deleteBlog.dataset.doc}`;
+			fetch(endpoint, {
+				method: "DELETE",
+			})
+				.then((response) => response.json())
+				.then((data) => (window.location.href = data.redirect))
+				.catch((err) => console.log(err));
+		});
+	</script>
+</html>
